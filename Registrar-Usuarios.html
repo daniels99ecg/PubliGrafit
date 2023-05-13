@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>P-G Registrar Usuarios</title>
   <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
   <!-- Custom styles -->
@@ -372,7 +374,7 @@
     <!-- ! Main -->
    <script src="validar/validar.js"></script>
   <div class="todoform">
-   <form action="Listar-Usuarios.html" method="get">
+   <form action="" method="get">
     <img class="imagen1" src="https://cdn-icons-png.flaticon.com/512/359/359858.png" alt="">
     <div class="row">
       <div class="col">
@@ -413,24 +415,27 @@
       </div>
 
       <div class="col">
-      <label for="inputEmail4" class="confirmar">Confirmar Contraseña(*)</label>
+      <label for="inputEmail4" class="form-label">Confirmar Contraseña(*)</label>
 
-      <input type="text" class="confirmar" placeholder="Confirmar Contraseña" aria-label="Last name">
+      <input type="text" class="form-control" placeholder="Confirmar Contraseña" aria-label="Last name">
     </div>
     </div>
 
     
 
-    <div class="roles">
-      <label for="" class="check1">Administrador</label>
-      <input type="checkbox" name="" class="check1"> 
-      <label for="" class="check1">Empleado</label>
-      <input type="checkbox" name="" class="check1"> 
+    <div class="roles row">
+      <label for="" class="form-label ml-3">Administrador</label>
+      <input type="checkbox" name="" class="form-check mr-2"> 
+      <label for="" class="form-label ml-5">Empleado</label>
+      <input type="checkbox" name="" class="form-check mr-2"> 
+
+
+      
     </div>
 
-    <div class="col-12">
-      <button type="button" class="btn1 " onclick="validart()">Registrar</button>
-      <button type="button" class="btn2">Cancelar</button>
+    <div class="col-12 row mr-5">
+      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
+      <button type="button" class="btn btn-danger ">Cancelar</button>
     </div>
   </form>
   </div>

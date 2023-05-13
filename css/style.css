@@ -1321,17 +1321,14 @@ button {
 
 }
 
-.btn1{
-  background: #1b4ef2;
-  margin-left: 300px;
-  height:45px;
-  width: 100px;
-  border: 1px solid blue;
-  border-radius: 5px;
-  color:white;
-  font-size: 20px;    
+.col-12{
+
+  margin-left: 35%;
+  
+     
 
 }
+/*
 .btn2{
   background: red;
   height:45px;
@@ -1343,7 +1340,7 @@ button {
   margin-left: 60px;
   
 }
-
+*/
 .confirmar{
 margin-top: 16px;
 }
@@ -1797,11 +1794,8 @@ button.disabled:focus {
   background-color: rgba(75, 222, 151, 0.1);
 }
 
-input {
- 
-  display: flex;
-  border-width: 0;
-  min-height: 40px;
+.form-control{
+ width: 250px;
   border:1px solid black;
   background: transparent; 
   border: none; 
@@ -1814,13 +1808,13 @@ input {
   width: 45%;
   border:1px solid black;
   border-radius: 10px;
-  margin: 15px;
+  margin: 2%;
   display: flex;
   padding: 20px;
-  margin-left: 230px;
+  margin-left: 30%;
   
 }
-.check1{
+.form-check{
   margin-left: 10%;
 
 }
