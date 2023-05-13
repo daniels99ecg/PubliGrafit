@@ -1795,7 +1795,6 @@ button.disabled:focus {
 }
 
 .form-control{
- width: 250px;
   border:1px solid black;
   background: transparent; 
   border: none; 
