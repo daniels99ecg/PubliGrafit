@@ -1,6 +1,6 @@
 function validart(){
 
-    let vdni=document.getElementById("dni").submit();
+    let vdni=document.getElementById("dni").value;
     let vnombre=document.getElementById("nombre").value;
     let vapellido=document.getElementById("apellido").value;
     let vtelefono=document.getElementById("telefono").value;
