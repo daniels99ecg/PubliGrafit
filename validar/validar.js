@@ -18,10 +18,7 @@ function validart(){
 
       
     }else{
-        let filas=`<th scope="row">1</th><td>${vdni}</td><td>${vnombre}</td><td>${vapellido}</td><td>${vcorreo}</td><td>${vcontrasena}</td>`;
-        let btn = document.createElement("tr");
-        btn.innerHTML=filas;
-        document.getElementById("tablas").appendChild(btn)
+     console.log("Pruebas")
     }
 
   
