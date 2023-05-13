@@ -1323,7 +1323,7 @@ button {
 
 .btn1{
   background: #1b4ef2;
-  margin-left: 330.20px;
+  margin-left: 300px;
   height:45px;
   width: 100px;
   border: 1px solid blue;
@@ -1340,9 +1340,10 @@ button {
   border-radius: 5px;
   color:white;
   font-size: 20px;
-
+  margin-left: 60px;
   
 }
+
 .confirmar{
   margin-left: 330.20px;
 
@@ -1826,9 +1827,10 @@ input {
 }
 
 .todoform{
+  background: white;
   margin-left: 15%;
   margin-top: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   width: 70%;
   height: 80%;
   border-radius: 15px;
