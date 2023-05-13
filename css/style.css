@@ -1818,20 +1818,19 @@ button.disabled:focus {
   margin-left: 10%;
 
 }
-
-.todoform{
-  background: white;
+.card{
   margin-left: 15%;
-  margin-top: 20px;
-  border: 1px solid rgb(255, 255, 255);
-  width: 70%;
-  height: 80%;
+  margin-top: 20px; 
   border-radius: 15px;
+
 }
 
-.imagen1{
+.form-row{
+  margin-left: 23% ;
+}
+.img-fluid{
   width: 150px;
-    margin-left: 355px;
+   
 }
 input[type="checkbox"],
 input[type="radio"] {
