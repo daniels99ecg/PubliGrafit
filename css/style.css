@@ -1809,7 +1809,6 @@ button.disabled:focus {
   border-radius: 10px;
   margin: 2%;
   display: flex;
-  padding: 20px;
   margin-left: 30%;
   
 }
