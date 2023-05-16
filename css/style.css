@@ -441,8 +441,7 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: 200px;
+  margin-left: 120px;
 }
 
 .no-gutters {
@@ -1809,6 +1808,7 @@ button.disabled:focus {
   border-radius: 10px;
   margin: 2%;
   display: flex;
+  padding: 20px;
   margin-left: 30%;
   
 }
@@ -4355,4 +4355,79 @@ label {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+}
+
+.dato{
+  margin-left: 220px;
+}
+
+.table{
+  margin-right: -100%;
+}
+
+.alert{
+top: 5%;
+right: 173%;
+}
+
+.dato3{
+  width: 20%;
+  left: 40%;
+  top: 0%;
+}
+
+.dato4{
+  width: 15%;
+  left: 1.5%;
+  top: -3%;
+}
+
+.dato5{
+  position: relative;
+  top: 100px;
+  left: -50px;
+}
+
+.dato6{
+  position: relative;
+  top: -38px;
+  right: -45px;
+}
+
+:root {
+  --color-green: #00a878;
+  --color-red: red;
+  --color-button: #fdffff;
+  --color-black: #000;
+}
+.switch-button {
+  display: inline-block;
+}
+.switch-button .switch-button__checkbox {
+  display: none;
+}
+.switch-button .switch-button__label {
+  background-color: var(--color-red);
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+.switch-button .switch-button__label:before {
+  transition: .1s;
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-button);
+  content: '';
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+  background-color: var(--color-green);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+  transform: translateX(2rem);
 }
