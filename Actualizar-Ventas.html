@@ -90,9 +90,7 @@
               <li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
-                        <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
-                      </svg>Insumos
+                        <span class="icon fa-archive" aria-hidden="true"></span>Insumos
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -100,13 +98,13 @@
                     </a>
                     <ul class="cat-sub-menu">
                         <li>
-                            <a href="Registrar-Insumos.html">Registrar Insumos</a>
+                            <a href="insum-01.html">Registrar Insumos</a>
                         </li>
                         <li>
-                            <a href="Listar-Insumos.html">Listar Insumos</a>
+                            <a href="insum-02.html">Listar Insumos</a>
                         </li>
                         <li>
-                          <a href="Actualizar-Insumos.html">Actualizar Insumos</a>
+                          <a href="insum-03.html">Actualizar Insumos</a>
                       </li>
                     </ul>
                 </li>
@@ -170,7 +168,9 @@
                   </ul>
               </li>
                   <a class="show-cat-btn" href="##">
-                    <span class="icon fa-archive" aria-hidden="true"></span>Ventas
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                      <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    </svg></span>Ventas
                     <span class="category__btn transparent-btn" title="Open list">
                         <span class="sr-only">Open list</span>
                         <span class="icon arrow-down" aria-hidden="true"></span>
@@ -178,13 +178,13 @@
                 </a>
                 <ul class="cat-sub-menu">
                     <li>
-                        <a href="insum-01.html">Registrar Ventas</a>
+                        <a href="Registrar-Ventas.html">Registrar Ventas</a>
                     </li>
                     <li>
-                        <a href="insum-02.html">Listar Ventas</a>
+                        <a href="Listar-Ventas.html">Listar Ventas</a>
                     </li>
                     <li>
-                      <a href="insum-03.html">Actualizar Ventas</a>
+                      <a href="Actualizar-Ventas.html">Actualizar Ventas</a>
                   </li>
                 </ul>
             </li>
@@ -375,52 +375,123 @@
 </nav>
     <!-- ! Main -->
    <script src="validar/validar.js"></script>
-  <div class="card" style="width: 64%;">
+  <div class="card" style="width: 70%;">
 
     <div class="card-body">
    <form action="" method="get">
     <div class="text-center">
-    <img class="img-fluid ml-5" src=https://dimidium.com.ec/wp-content/uploads/2020/06/INSUMOS.png alt="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+          </svg>
   </div>
     <div class="form-row">
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label" >Nombre del insumo(*)</label>
+      <div class="col-xs-4" style="margin-left: -85px;">
+        <label for="inputEmail4" class="form-label" >Cliente(*)</label>
 
-        <input type="text" class="form-control" placeholder="Nombre del insumo" aria-label="First name" id="Nombre-insumo">
+        <input type="text" class="form-control" placeholder="CC Nombre" id="cliente">
       </div>
+      <div class="col-xs-4" style="margin-left: 82px">
+        <label for="inputEmail4" class="form-label">Id Venta(*)</label>
+
+        <input type="number" class="form-control" placeholder="" id="venta" disabled="disabled">
+      </div>
+
       
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Proveedor del insumo(*)</label><br>
-        <select class="form-control" name="Proveedor" id="" value="Proveedor del insumo" placeholder="Proveedor">
-          <option value="">Proveedor</option>
-          <option value="Exito">Exito</option>
-          <option value="Homecenter">Homecenter</option>
-          </select>
-
- 
-      </div>
+      
     </div>
 
-    <div class="form-row">
+    <div class="row">
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Cantidad del insumo(*)</label>
+        <label for="inputEmail4" class="form-label">Tipo Comprobante(*)</label>
 
-        <input type="number" class="form-control" placeholder="Cantidad del insumo" aria-label="First name" id="Cantidad-insumo">
+        <select type="select" class="form-control" placeholder="Tipo Comprobante" id="comprobante">
+            <option value="ninguno">Ninguno</option>
+            <option value="ninguno">Factura</option>
+            <option value="ninguno">Electrónico</option>
+        </select>
       </div>
+      <div class="dato col-xs-4">
+        <label for="inputEmail4" class="form-label">Fecha</label>
+
+        
+        <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
+       
+       
+        <h6 class="alert" style="color: red">Campos obligatorios(*)</h6>
+      </div>
+
+      <a href="Registrar-Ventas.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="dato5 bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg></a>
+
+      <div class="col-xs-5">
+        <label for="inputEmail4" class="form-label">Producto(*)</label>
+
+        <select type="select" class="form-control" value="----" id="producto">
+            <option value="Agendas">Agendas</option>
+            <option value="Talonarios">Talonarios</option>
+            <option value="Vinilos">Vinilos</option>
+            <option value="Mugs">Mugs</option>
+        </select>
+      </div>
+
+        <div class="col-3">
+            <label for="inputEmail4" class="form-label">Cantidad(*)</label>
+      
+            <input type="number" class="form-control" placeholder="Ingresar Cantidad" id="cantidad">
+            </div>
+
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">precio del insumo(*)</label>
+        <label for="inputEmail4" class="form-label">IVA(*)</label>
+          
+            <select type="number" class="form-control" value="" id="iva">
+            <option value="Ninguno">Ninguno</option>
+            <option value="19%">19%</option>
+            <option value="16%">16%</option>
+            <option value="14%">14%</option>
+        </select>
+        </div>
 
-        <input type="number" class="form-control" placeholder="Precio del insumo" aria-label="First name" id="Precio-insumo">
-      </div>
-
+      <div class="col-3">
+        <label for="inputEmail4" class="form-label">Total(*)</label>
+                  
+            <input type="text" class="form-control" placeholder="Total" id="total">
+            </div>      
     </div>
-    <div class="col-12 row mr-5">
-      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
-      <button type="button" class="btn btn-danger ">Cancelar</button>
+
+    <div class="col-12 row mr-2">
+      <a href="Listar-Ventas.html"><button type="button" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button></a>
+      <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
     </div>
   </form>
 </div>
   </div>
+
+  <table class="table table-hover ml-5">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">IVA</th>
+        <th scope="col">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">0001</th>
+        <td>Talonarios</td>
+        <td>15</td>
+        <td>16%</td>
+        <td>180.000</td>
+           <a href="Actualizar-Usuario.html"> 
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
 
     <!-- ! Footer -->
     <footer class="footer">
@@ -445,5 +516,3 @@
 <!-- Custom scripts -->
 <script src="js/script.js"></script>
 </body>
-
-</html>

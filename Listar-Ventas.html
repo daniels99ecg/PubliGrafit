@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P-G Registrar Usuarios</title>
+  <title>PubliGrafit</title>
   <!-- Favicon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
   <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
   <!-- Custom styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <link rel="stylesheet" href="./css/style.css">
+
 
   
 
@@ -62,7 +62,7 @@
                           <a href="Listar-Usuarios.html">Listar Usuarios</a>
                       </li>
                       <li>
-                        <a href="Listar-Usuarios.html">Actualizar Usuarios</a>
+                        <a href="users-03.html">Actualizar Usuarios</a>
                     </li>
                   </ul>
               </li>
@@ -77,7 +77,7 @@
                     </a>
                     <ul class="cat-sub-menu">
                       <li>
-                          <a href="rols-01.html">Crear Rol</a>
+                          <a href="Registrar-Roles.html">Crear Rol</a>
                       </li>
                       <li>
                           <a href="rols-02.html">Listar Roles</a>
@@ -90,9 +90,7 @@
               <li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
-                        <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
-                      </svg>Insumos
+                        <span class="icon fa-archive" aria-hidden="true"></span>Insumos
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -100,13 +98,13 @@
                     </a>
                     <ul class="cat-sub-menu">
                         <li>
-                            <a href="Registrar-Insumos.html">Registrar Insumos</a>
+                            <a href="insum-01.html">Registrar Insumos</a>
                         </li>
                         <li>
-                            <a href="Listar-Insumos.html">Listar Insumos</a>
+                            <a href="insum-02.html">Listar Insumos</a>
                         </li>
                         <li>
-                          <a href="Actualizar-Insumos.html">Actualizar Insumos</a>
+                          <a href="insum-03.html">Actualizar Insumos</a>
                       </li>
                     </ul>
                 </li>
@@ -170,7 +168,9 @@
                   </ul>
               </li>
                   <a class="show-cat-btn" href="##">
-                    <span class="icon fa-archive" aria-hidden="true"></span>Ventas
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                      <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    </svg></span>Ventas
                     <span class="category__btn transparent-btn" title="Open list">
                         <span class="sr-only">Open list</span>
                         <span class="icon arrow-down" aria-hidden="true"></span>
@@ -178,13 +178,13 @@
                 </a>
                 <ul class="cat-sub-menu">
                     <li>
-                        <a href="insum-01.html">Registrar Ventas</a>
+                        <a href="Registrar-Ventas.html">Registrar Ventas</a>
                     </li>
                     <li>
-                        <a href="insum-02.html">Listar Ventas</a>
+                        <a href="Listar-Ventas.html">Listar Ventas</a>
                     </li>
                     <li>
-                      <a href="insum-03.html">Actualizar Ventas</a>
+                      <a href="Actualizar-Ventas.html">Actualizar Ventas</a>
                   </li>
                 </ul>
             </li>
@@ -374,54 +374,98 @@
   </div>
 </nav>
     <!-- ! Main -->
-   <script src="validar/validar.js"></script>
-  <div class="card" style="width: 64%;">
+   
+<br>
+<br>
+<br>
+<a class="btn btn-primary ml-4" href="Registrar-Ventas.html" role="button">Nuevo Registro</a>
 
-    <div class="card-body">
-   <form action="" method="get">
-    <div class="text-center">
-    <img class="img-fluid ml-5" src=https://dimidium.com.ec/wp-content/uploads/2020/06/INSUMOS.png alt="">
-  </div>
-    <div class="form-row">
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label" >Nombre del insumo(*)</label>
+<div class="dato3 col">
+    <label for="inputEmail4" class="form-label">Seleccionar Fecha</label>
 
-        <input type="text" class="form-control" placeholder="Nombre del insumo" aria-label="First name" id="Nombre-insumo">
-      </div>
-      
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Proveedor del insumo(*)</label><br>
-        <select class="form-control" name="Proveedor" id="" value="Proveedor del insumo" placeholder="Proveedor">
-          <option value="">Proveedor</option>
-          <option value="Exito">Exito</option>
-          <option value="Homecenter">Homecenter</option>
-          </select>
+    
+    <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
+</div>    
 
- 
-      </div>
-    </div>
+<div class="dato4 col">
+    <label for="inputEmail4" class="form-label">Mostrar Registros</label>
 
-    <div class="form-row">
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Cantidad del insumo(*)</label>
+    
+    <input type="number" class="form-control" placeholder=""  id="registros">
+</div>   
+<br>
+<br>
+    <table class="table table-hover ml-3">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Tipo Comprobante</th>
+            <th scope="col">Id Venta</th>
+            <th scope="col">Id Producto</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col">IVA</th>
+            <th scope="col">Total</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Administrador</td>
+            <td>Mohamed Alí</td>
+            <td>Electrónico</td>
+            <td>00001</td>
+            <td>05698</td>
+            <td>Talonarios</td>
+            <td>02/02/2023</td>
+            <td>180.000</td>
+            <td>16%</td>
+            <td>208.800</td>
+            <td><div class="switch-button">
+              <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+              <label for="switch-label" class="switch-button__label"></label>
+          </div></td>
+            
+            <td>
+               <a href="Actualizar-Ventas.html"> <button type="button" class="btn btn-outline-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
+    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path>
+  </svg>
+                  </button></a>
 
-        <input type="number" class="form-control" placeholder="Cantidad del insumo" aria-label="First name" id="Cantidad-insumo">
-      </div>
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">precio del insumo(*)</label>
 
-        <input type="number" class="form-control" placeholder="Precio del insumo" aria-label="First name" id="Precio-insumo">
-      </div>
 
-    </div>
-    <div class="col-12 row mr-5">
-      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
-      <button type="button" class="btn btn-danger ">Cancelar</button>
-    </div>
-  </form>
-</div>
-  </div>
 
+                  <button type="button" class="dato6 btn btn-outline-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"></path>
+    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"></path>
+  </svg>
+                    
+                  </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+  
+
+
+
+      <!DOCTYPE html>
+      <html>
+          
+      </html>
+
+
+    
+  
     <!-- ! Footer -->
     <footer class="footer">
   <div class="container footer--flex">
@@ -445,5 +489,3 @@
 <!-- Custom scripts -->
 <script src="js/script.js"></script>
 </body>
-
-</html>
