@@ -116,13 +116,13 @@ header.innerHTML=`
                   </a>
                   <ul class="cat-sub-menu">
                       <li>
-                          <a href="prod-01.html">Registrar Productos</a>
+                          <a href="Registrar-Compras.html">Registrar Productos</a>
                       </li>
                       <li>
-                          <a href="prod-02.html">Listar Productos</a>
+                          <a href="Listar-Productos.html">Listar Productos</a>
                       </li>
                       <li>
-                        <a href="prod-03.html">Actualizar Productos</a>
+                        <a href="Listar-Productos.html">Actualizar Productos</a>
                     </li>
                   </ul>
               </li>
