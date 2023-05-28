@@ -108,7 +108,9 @@ header.innerHTML=`
               </li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                      <span class="icon fa-archive" aria-hidden="true"></span>Productos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                    <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
+                </svg> Productos
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>
@@ -116,18 +118,20 @@ header.innerHTML=`
                   </a>
                   <ul class="cat-sub-menu">
                       <li>
-                          <a href="Registrar-Compras.html">Registrar Productos</a>
+                          <a href="Registrar-Productos.html">Registrar Productos</a>
                       </li>
                       <li>
                           <a href="Listar-Productos.html">Listar Productos</a>
                       </li>
                       <li>
-                        <a href="Listar-Productos.html">Actualizar Productos</a>
+                        <a href="Actualizar-Productos.html">Actualizar Productos</a>
                     </li>
                   </ul>
               </li>
                     <a class="show-cat-btn" href="##">
-                      <span class="icon fa-archive" aria-hidden="true"></span>Compras
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="22" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                  </svg> Compras
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>

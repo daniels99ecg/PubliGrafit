@@ -60,7 +60,9 @@ header.innerHTML=`
               </li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                      <span class="icon fa-archive" aria-hidden="true"></span>Productos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                    <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
+                </svg>Productos
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>
@@ -75,7 +77,9 @@ header.innerHTML=`
                   </ul>
               </li>
                     <a class="show-cat-btn" href="##">
-                      <span class="icon fa-archive" aria-hidden="true"></span>Compras
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="22" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                  </svg>Compras
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>
@@ -109,7 +113,10 @@ header.innerHTML=`
                 </ul>
             </li>
                   <a class="show-cat-btn" href="##">
-                    <span class="icon fa-archive" aria-hidden="true"></span>Clientes
+                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16" style="margin-left: -10px;">
+                  <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                </svg>Clientes
                     <span class="category__btn transparent-btn" title="Open list">
                         <span class="sr-only">Open list</span>
                         <span class="icon arrow-down" aria-hidden="true"></span>
@@ -117,13 +124,13 @@ header.innerHTML=`
                 </a>
                 <ul class="cat-sub-menu">
                     <li>
-                        <a href="clie-01.html">Registrar Clientes</a>
+                        <a href="Registrar-Clientes.html">Registrar Clientes</a>
                     </li>
                     <li>
-                        <a href="clie-02.html">Listar Clientes</a>
+                        <a href="Listar-Clientes.html">Listar Clientes</a>
                     </li>
                     <li>
-                      <a href="clie-03.html">Actualizar Clientes</a>
+                      <a href="Actualizar-Clientes.html">Actualizar Clientes</a>
                   </li>
                 </ul>
             </li>
