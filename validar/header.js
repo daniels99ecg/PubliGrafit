@@ -175,13 +175,13 @@ header.innerHTML=`
                 </a>
                 <ul class="cat-sub-menu">
                     <li>
-                        <a href="clie-01.html">Registrar Clientes</a>
+                        <a href="Registrar-Clientes.html">Registrar Clientes</a>
                     </li>
                     <li>
-                        <a href="clie-02.html">Listar Clientes</a>
+                        <a href="Listar-Clientes.html">Listar Clientes</a>
                     </li>
                     <li>
-                      <a href="clie-03.html">Actualizar Clientes</a>
+                      <a href="Actualizar-Clientes.html">Actualizar Clientes</a>
                   </li>
                 </ul>
             </li>
