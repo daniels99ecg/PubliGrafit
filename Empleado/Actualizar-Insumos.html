@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P-G Registrar Usuarios</title>
+  <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  
+
+</head>
+
+<body>
+  <div class="layer"></div>
+<!-- ! Body -->
+<a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+<div class="page-flex">
+  <!-- ! Sidebar -->
+  <aside class="sidebar" id="header">
+    <script src="./validar/header.js"></script>
+</aside>
+  <div class="main-wrapper">
+    <!-- ! Main nav -->
+    <nav class="main-nav--bg">
+      <script src="./validar/nav.js"></script>
+    </nav>
+    <!-- ! Main -->
+    <script src="validar/validar.js"></script>
+    <div class="card" style="width: 63%;">
+  
+      <div class="card-body">
+     <form action="" method="get">
+      <div class="text-center">
+      <img class="img-fluid ml-5" src=https://dimidium.com.ec/wp-content/uploads/2020/06/INSUMOS.png alt="">
+    </div>
+      <div class="form-row">
+        <div class="col-xs-4">
+          <label for="inputEmail4" class="form-label" >Nombre del insumo(*)</label>
+  
+          <input type="text" class="form-control" placeholder="Nombre del insumo" aria-label="First name" id="Nombre-insumo">
+        </div>
+        
+        <div class="col-xs-4">
+            <label for="inputEmail4" class="form-label">Proveedor del insumo(*)</label><br>
+            <select class="form-control" name="Proveedor" id="" value="Proveedor del insumo" placeholder="Proveedor">
+              <option value="">Proveedor</option>
+              <option value="Exito">Exito</option>
+              <option value="Homecenter">Homecenter</option>
+              </select>
+    
+     
+          </div>
+   
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="col-xs-4">
+          <label for="inputEmail4" class="form-label">Cantidad del insumo(*)</label>
+  
+          <input type="number" class="form-control" placeholder="Cantidad del insumo" aria-label="First name" id="Cantidad-insumo">
+        </div>
+        <div class="col-xs-4">
+          <label for="inputEmail4" class="form-label">precio del insumo(*)</label>
+  
+          <input type="number" class="form-control" placeholder="Precio del insumo" aria-label="First name" id="Precio-insumo">
+        </div>
+  
+      </div>
+    <div class="col-12 row mr-5">
+      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button>
+      <button type="button" class="btn btn-danger ">Cancelar</button>
+    </div>
+  </form>
+</div>
+  
+
+    <!-- ! Footer -->
+    <footer class="footer">
+  <div class="container footer--flex">
+    <div class="footer-start">
+      <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank"
+          rel="noopener noreferrer">elegant-dashboard.com</a></p>
+    </div>
+    <ul class="footer-end">
+      <li><a href="##">About</a></li>
+      <li><a href="##">Support</a></li>
+      <li><a href="##">Puchase</a></li>
+    </ul>
+  </div>
+</footer>
+  </div>
+</div>
+<!-- Chart library -->
+<script src="./plugins/chart.min.js"></script>
+<!-- Icons library -->
+<script src="plugins/feather.min.js"></script>
+<!-- Custom scripts -->
+<script src="js/script.js"></script>
+</body>
+
+</html>

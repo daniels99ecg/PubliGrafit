@@ -23,7 +23,8 @@
 <!-- ! Body -->
 <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
 <div class="page-flex">
- 
+  <!-- ! Sidebar -->
+
   <!-- ! Sidebar -->
   <aside class="sidebar" id="header">
     <script src="./validar/header.js"></script>
@@ -34,81 +35,55 @@
     <nav class="main-nav--bg">
       <script src="./validar/nav.js"></script>
     </nav>
-   
+    
    <script src="validar/validar.js"></script>
   <div class="card" style="width: 64%;">
 
     <div class="card-body">
-   <form action="Listar-Usuarios.html" method="post">
+   <form action="" method="get">
     <div class="text-center">
-    <img class="img-fluid ml-5" src="https://cdn-icons-png.flaticon.com/512/359/359858.png" alt="">
+    <img class="img-fluid ml-5" src=https://dimidium.com.ec/wp-content/uploads/2020/06/INSUMOS.png alt="">
   </div>
-  
     <div class="form-row">
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label" >DNI(*)</label>
+        <label for="inputEmail4" class="form-label" >Nombre del insumo(*)</label>
 
-        <input type="text" class="form-control" placeholder="Dni" aria-label="First name" id="dni">
+        <input type="text" class="form-control" placeholder="Nombre del insumo" aria-label="First name" id="Nombre-insumo">
       </div>
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Nombres(*)</label>
-
-        <input type="text" class="form-control" placeholder="Nombre" aria-label="Last name" id="nombre">
-      </div>
-
       
-      
-     </div>
-
-     <div class="form-row">
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Apellidos(*)</label>
+        <label for="inputEmail4" class="form-label">Proveedor del insumo(*)</label><br>
+        <select class="form-control" name="Proveedor" id="" value="Proveedor del insumo" placeholder="Proveedor">
+          <option value="">Proveedor</option>
+          <option value="Exito">Exito</option>
+          <option value="Homecenter">Homecenter</option>
+          </select>
 
-        <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" id="apellido">
+ 
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Cantidad del insumo(*)</label>
+
+        <input type="number" class="form-control" placeholder="Cantidad del insumo" aria-label="First name" id="Cantidad-insumo">
       </div>
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Correo electronico(*)</label>
+        <label for="inputEmail4" class="form-label">precio del insumo(*)</label>
 
-        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="First name" id="correo">
+        <input type="number" class="form-control" placeholder="Precio del insumo" aria-label="First name" id="Precio-insumo">
       </div>
 
-     </div>
-
-     <div class="form-row">
-    
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Contraseña(*)</label>
-
-        <input type="text" class="form-control" placeholder="Contraseña" aria-label="Last name" id="contrasena">
-      </div>
-
-      <div class="col-xs-4">
-      <label for="inputEmail4" class="form-label">Confirmar Contraseña(*)</label>
-
-      <input type="text" class="form-control" placeholder="Confirmar Contraseña" aria-label="Last name">
-     </div>
-     </div>
-
-    
-
-     <div class="roles row">
-      <label for="" class="form-label ml-3">Administrador</label>
-      <input type="checkbox" name="" class="form-check "> 
-      <label for="" class="form-label ml-5">Empleado</label>
-      <input type="checkbox" name="" class="form-check">  
-
-
-      
-     </div>
-
-      <div class="col-12 row mr-5">
-      <button type="submit" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
+    </div>
+    <div class="col-12 row mr-5">
+      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
       <button type="button" class="btn btn-danger ">Cancelar</button>
-     </div>
-    
- </div>
+    </div>
+  </form>
+</div>
   </div>
-</form>
+
     <!-- ! Footer -->
     <footer class="footer">
   <div class="container footer--flex">

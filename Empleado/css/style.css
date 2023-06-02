@@ -4431,3 +4431,7 @@ right: 173%;
 .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
   transform: translateX(2rem);
 }
+
+select{
+border-radius: 15px;
+}

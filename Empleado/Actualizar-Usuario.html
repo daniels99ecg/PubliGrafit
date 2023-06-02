@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publigrafit</title>
+  <title>P-G Registrar Usuarios</title>
   <!-- Favicon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -23,80 +23,89 @@
 <!-- ! Body -->
 <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
 <div class="page-flex">
- 
   <!-- ! Sidebar -->
   <aside class="sidebar" id="header">
     <script src="./validar/header.js"></script>
 </aside>
-
   <div class="main-wrapper">
     <!-- ! Main nav -->
     <nav class="main-nav--bg">
       <script src="./validar/nav.js"></script>
     </nav>
-   
+    <!-- ! Main -->
    <script src="validar/validar.js"></script>
-   <form action="Listar-Clientes.html" method="post">
-  <div class="card" style="width: 64%;">
+  <div class="card" style="width: 70%;">
 
     <div class="card-body">
-  
+   <form action="" method="get">
     <div class="text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
-        <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-    </svg>
-</div>
-  
+    <img class="img-fluid ml-5" src="https://cdn-icons-png.flaticon.com/512/359/359858.png" alt="">
+  </div>
     <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -40px;">
+      <div class="col-xs-4">
         <label for="inputEmail4" class="form-label" >DNI(*)</label>
 
         <input type="text" class="form-control" placeholder="Dni" aria-label="First name" id="dni">
       </div>
       <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Nombre(*)</label>
+        <label for="inputEmail4" class="form-label">Nombres(*)</label>
 
-        <input type="text" class="form-control" placeholder="Nombres" aria-label="Last name" id="nombre">
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Last name" id="nombre">
       </div>
-      </div>
 
+      
+      
+    </div>
 
-     <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -40px;">
-        <label for="inputEmail4" class="form-label">Apellido(*)</label>
+    <div class="form-row">
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Apellidos(*)</label>
 
         <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" id="apellido">
       </div>
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Correo electronico(*)</label>
 
-      <div class="col-xs-4" > 
-        <label for="inputEmail4" class="form-label">Dirección(*)</label>
-    
-        <input type="text" class="form-control" placeholder="Dirección" aria-label="direccion">
-        </div>
-   
+        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="First name" id="correo">
       </div>
 
-      <div class="form-row">
-  
+    </div>
+
+    <div class="form-row">
+    
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Contraseña(*)</label>
+
+        <input type="text" class="form-control" placeholder="Contraseña" aria-label="Last name" id="contrasena">
+      </div>
+
+      <div class="col-xs-4">
+      <label for="inputEmail4" class="form-label">Confirmar Contraseña(*)</label>
+
+      <input type="text" class="form-control" placeholder="Confirmar Contraseña" aria-label="Last name">
+    </div>
+    </div>
+
+    
+
+    <div class="roles row">
+      <label for="" class="form-label ml-3">Administrador</label>
+      <input type="checkbox" name="" class="form-check mr-2"> 
+      <label for="" class="form-label ml-5">Empleado</label>
+      <input type="checkbox" name="" class="form-check mr-2"> 
+
+
       
-      <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -50px;">
-        <label for="inputEmail4" class="form-label">Correo Electrónico(*)</label>
+    </div>
 
-        <input type="email" class="form-control" placeholder="Email" aria-label="email">
-      </div>
-     </div>
-     </div>
-
-      <div class="col-12 row mr-5">
-      <button type="submit" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
+    <div class="col-12 row mr-5">
+      <button type="button" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button>
       <button type="button" class="btn btn-danger ">Cancelar</button>
-     </div>
-    
- </div>
+    </div>
+  </form>
+</div>
   </div>
-</form>
+
     <!-- ! Footer -->
     <footer class="footer">
   <div class="container footer--flex">

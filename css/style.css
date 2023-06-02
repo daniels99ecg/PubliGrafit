@@ -1817,14 +1817,16 @@ button.disabled:focus {
 
 }
 .card{
-  margin-left: 15%;
-  margin-top: 20px; 
+  width: 75%;
+  margin: 0;
+  margin-left: 1%;
+  margin-top: 3%; 
   border-radius: 15px;
 
 }
 
 .form-row{
-  margin-left: 23% ;
+  margin-left: 15% ;
 }
 .img-fluid{
   width: 150px;
@@ -4431,3 +4433,7 @@ right: 173%;
 .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
   transform: translateX(2rem);
 }
+
+select{
+  border-radius: 3px;
+  }
