@@ -331,24 +331,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (ctx) {
       var myCanvas = ctx.getContext('2d');
       var myChart = new Chart(myCanvas, {
-        type: 'line',
+        type: 'bar',
         data: {
-          labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
           datasets: [{
-            label: 'Last 6 months',
-            data: [35, 27, 40, 15, 30, 25, 45],
+            label: 'Ultimos 12 meses',
+            data: [50, 27, 40, 15, 30, 25, 45, 69, 80, 100, 30,10],
             cubicInterpolationMode: 'monotone',
             tension: 0.4,
             backgroundColor: ['rgba(95, 46, 234, 1)'],
             borderColor: ['rgba(95, 46, 234, 1)'],
-            borderWidth: 2
-          }, {
-            label: 'Previous',
-            data: [20, 36, 16, 45, 29, 32, 10],
-            cubicInterpolationMode: 'monotone',
-            tension: 0.4,
-            backgroundColor: ['rgba(75, 222, 151, 1)'],
-            borderColor: ['rgba(75, 222, 151, 1)'],
             borderWidth: 2
           }]
         },
@@ -391,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             title: {
               display: true,
-              text: ['Visitor statistics', 'Nov - July'],
+              text: ['Ventas', 'Ene - Dic'],
               align: 'start',
               color: '#171717',
               font: {
@@ -417,17 +409,17 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Customers chart */
 
 
-    var customersChart = document.getElementById('customersChart');
+   
 
     if (customersChart) {
       var customersChartCanvas = customersChart.getContext('2d');
       var myCustomersChart = new Chart(customersChartCanvas, {
-        type: 'line',
+        type: 'bar',
         data: {
-          labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
           datasets: [{
             label: '+958',
-            data: [90, 10, 80, 20, 70, 30, 50],
+            data: [50, 27, 40, 15, 30, 25, 45, 69, 80, 100, 30,10],
             tension: 0.4,
             backgroundColor: function backgroundColor(context) {
               var chart = context.chart;
