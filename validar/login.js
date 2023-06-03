@@ -9,7 +9,7 @@ const contra=document.getElementById('contrasena').value;
 
 if(usuario=="danielsenju1999@gmail.com" && contra=="123"){
     console.log('ingreso')
-    window.location='../../../dashboard.html';
+    window.location='PubliGrafit/../dashboard.html';
 }
 
 else if(usuario=="camilo@gmail.com" && contra=="123456") {
@@ -17,7 +17,7 @@ else if(usuario=="camilo@gmail.com" && contra=="123456") {
     window.location='./Empleado/dashboard.html';
 }else{
     console.log('no ingreso')
-    window.location='Publigrafit/../login.html';
+    window.location='PubliGrafit/../login.html';
 
 }
 
