@@ -3,7 +3,7 @@ const header= document.querySelector("aside");
 header.innerHTML=`
 <div class="sidebar-start">
         <div class="sidebar-head">
-            <a href="index.html" class="logo-wrapper" title="Home">
+            <a href="dashboard.html" class="logo-wrapper" title="Home">
                 <span class="sr-only">Home</span>
                 <span class="icon logo" aria-hidden="true"></span>
                 <div class="logo-text">
@@ -20,7 +20,7 @@ header.innerHTML=`
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="index.html"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a class="active" href="dashboard.html"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
                     <a class="show-cat-btn" href="##">

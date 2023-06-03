@@ -39,21 +39,22 @@
   <div class="card" style="width: 70%;">
 
     <div class="card-body" >
-      <center>
+<center>
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-clipboard2-fill" viewBox="0 0 16 16">
         <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
         <path d="M3.5 1h.585A1.498 1.498 0 0 0 4 1.5V2a1.5 1.5 0 0 0 1.5 1.5h5A1.5 1.5 0 0 0 12 2v-.5c0-.175-.03-.344-.085-.5h.585A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1Z"/>
       </svg>
     </center>
+<div style="margin-left: 5%;">
       <form>
       <div class="form-row">
         
-          <div class="col-xs-4"style="width: 25%; margin-top:30%;" >
-            <label for="inputEmail4" class="form-label" >id</label>
+          <div class="col-xs-4" style="width: 25%;" >
+            <label for="inputEmail4" class="form-label" >Id</label>
     
-            <input type="text" class="form-control" placeholder="" aria-label="First name" id="id">
+            <input type="text" class="form-control" placeholder="" aria-label="First name" id="id" disabled>
           </div>
-          <div class="col-xs-4" style="width: 45%; margin-top:30%;">
+          <div class="col-xs-4">
             <label for="inputEmail4" class="form-label">Producto(*)</label>
     
             <input type="text" class="form-control" placeholder="Producto" aria-label="Last name" id="Producto">
@@ -61,20 +62,20 @@
         </div>
           
           
-             <!--Material textarea-->
-            <!-- <div class="md-form" style="width: 250px;">
-                <label for="form7">Producto</label>
-                <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>    
-            </div> -->
+         
             <div class="form-row">
         
-              <div class="col-xs-4" style="width: 27%; margin-top:5%;">
+              <div class="col-xs-4" style="width: 27%;">
+                
+                <label for="">Insumo(*)</label>
                 <select name="" id="" class="form-control">
                   <option value="">Insumo</option>
                 </select>
+                
               </div>
-              <div class="col-xs-4" style="width: 27%; margin-top:1%; " >
-                <label for="inputEmail4" class="form-label"></label>
+
+              <div class="col-xs-4" >
+                <label for="inputEmail4" class="form-label">Cantidad(*)</label>
         
                 <input type="number" class="form-control" placeholder="Cantidad" aria-label="Last name" id="nombre">
               </div>
@@ -83,30 +84,37 @@
        
           <br>
           <div class="form-row">
-        
-            <div class="col-xs-4" style="width: 27%; margin-top:5%;">
+            
+
+            <div class="col-xs-4" style="width: 27%; ">
+              <label for="">Insumo</label>
               <select name="" id="" class="form-control">
                 <option value="">Insumo</option>
               </select>
             </div>
-            <div class="col-xs-4" style="width: 27%; margin-top:1%; " >
-              <label for="inputEmail4" class="form-label"></label>
+            <div class="col-xs-4"  >
+              <label for="inputEmail4" class="form-label">Cantidad</label>
       
               <input type="number" class="form-control" placeholder="Cantidad" aria-label="Last name" id="nombre">
             </div>
           </div>
+        </div>
           <br>
-          <hr>
-          <div class="md-form" style="width: 70%;  margin-top: 3%;">
+          <center>
+          <div class="md-form" style="width: 35%;">
                 <label for="form7">Detalles</label>
-                <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>    
+                <textarea id="form7" class="md-textarea form-control" rows="" style=" border: 1px solid black;"></textarea>    
             </div>
+          </center>
             <div class="col-12 row mr-5">
                 <button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
                 <button type="button" class="btn btn-danger ">Cancelar</button>
               </div>
-            </form>
-          </div>               
+            
+          </div> 
+        </form>
+
+                     
 </div>
   
 
@@ -123,9 +131,10 @@
       <li><a href="##">Puchase</a></li>
     </ul>
   </div>
-</footer>
-  </div>
 </div>
+</div>
+</footer>
+
 <!-- Chart library -->
 <script src="./plugins/chart.min.js"></script>
 <!-- Icons library -->
