@@ -4397,6 +4397,18 @@ right: 173%;
   right: -45px;
 }
 
+.repo{
+position: relative;
+top: -4.4%;
+left: 89.5%;
+}
+
+#trbox{
+  position: relative;
+  top: 50%;
+  left: 1%;
+}
+
 :root {
   --color-green: #00a878;
   --color-red: red;

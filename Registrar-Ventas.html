@@ -47,39 +47,37 @@
           </svg>
   </div>
     <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -85px;">
-        <label for="inputEmail4" class="form-label">Cliente(*)</label>
+      <div class="col-3" style="margin-left: 70px;">
+        <label for="inputEmail4" class="form-label">DNI Cliente(*)</label>
 
-        <input type="text" class="form-control" placeholder="CC Nombre" id="cliente">
-      </div>
-      <div class="col-xs-4" style="margin-left: 82px;">
-        <label for="inputEmail4" class="form-label">Id Venta(*)</label>
-
-        <input type="number" class="form-control" placeholder="" id="venta" disabled="disabled">
+        <input type="text" class="form-control" placeholder="No. Documento" id="cliente">
       </div>
 
-      
+      <div class="form-row">
+      <div class="col-xs-4" style="margin-left: px;">
+        <label for="inputEmail4" class="form-label">Tipo Comprobante(*)</label>
+
+        <select type="select" class="form-control" placeholder="Tipo Comprobante" id="comprobante">
+          <option value="ninguno">Ninguno</option>
+          <option value="ninguno">Factura</option>
+          <option value="ninguno">Electrónico</option>
+      </select>
+      </div>
+
+
       
     </div>
 
     <div class="row">
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Tipo Comprobante(*)</label>
-
-        <select type="select" class="form-control" placeholder="Tipo Comprobante" id="comprobante">
-            <option value="ninguno">Ninguno</option>
-            <option value="ninguno">Factura</option>
-            <option value="ninguno">Electrónico</option>
-        </select>
-      </div>
-      <div class="dato col-xs-4">
+      <div class="col-5"  style="margin-left: -55px;">
         <label for="inputEmail4" class="form-label">Fecha</label>
 
-        
         <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
        
-       
-        <h6 class="alert" style="color: red">Campos obligatorios(*)</h6>
+        <div style="margin: 5%;">
+        <h6 style="color: red">Campos obligatorios(*)</h6>
+      </div>
+
       </div>
 
       <a href="Registrar-Ventas.html"></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="dato5 bi bi-plus-circle" viewBox="0 0 16 16">
@@ -87,43 +85,15 @@
         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
       </svg>
 
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Producto(*)</label>
-
-        <select type="select" class="form-control" value="----" id="producto">
-            <option value="Agendas">Agendas</option>
-            <option value="Talonarios">Talonarios</option>
-            <option value="Vinilos">Vinilos</option>
-            <option value="Mugs">Mugs</option>
-        </select>
-      </div>
-
-        <div class="col-3">
-            <label for="inputEmail4" class="form-label">Cantidad(*)</label>
       
-            <input type="number" class="form-control" placeholder="Ingresar Cantidad" id="cantidad">
-            </div>
-
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">IVA(*)</label>
-          
-            <select type="number" class="form-control" value="" id="iva">
-            <option value="Ninguno">Ninguno</option>
-            <option value="19%">19%</option>
-            <option value="16%">16%</option>
-            <option value="14%">14%</option>
-        </select>
-        </div>
-
-      <div class="col-3">
+      <div class="col-4" style="margin-left: 68px;">
         <label for="inputEmail4" class="form-label">Total(*)</label>
-                  
-            <input type="text" class="form-control" placeholder="Total" id="total">
+
+        <input type="text" class="form-control" placeholder="Total" id="total">
             </div>      
     </div>
 
-
-    <div class="col-12 row mr-2">
+    <div class="col-12 row mr-2" style="margin-left: 25%;">
       <a href="Listar-Ventas.html"><button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button></a>
       <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
     </div>
@@ -156,19 +126,7 @@
   </table>
 
     <!-- ! Footer -->
-    <footer class="footer">
-  <div class="container footer--flex">
-    <div class="footer-start">
-      <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank"
-          rel="noopener noreferrer">elegant-dashboard.com</a></p>
-    </div>
-    <ul class="footer-end">
-      <li><a href="##">About</a></li>
-      <li><a href="##">Support</a></li>
-      <li><a href="##">Puchase</a></li>
-    </ul>
-  </div>
-</footer>
+   
   </div>
 </div>
 <!-- Chart library -->
