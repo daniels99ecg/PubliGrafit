@@ -3,7 +3,7 @@ const header= document.querySelector("aside");
 header.innerHTML=`
 <div class="sidebar-start">
         <div class="sidebar-head">
-            <a href="index.html" class="logo-wrapper" title="Home">
+            <a href="dashboard.html" class="logo-wrapper" title="Home">
                 <span class="sr-only">Home</span>
                 <span class="icon logo" aria-hidden="true"></span>
                 <div class="logo-text">
@@ -20,13 +20,17 @@ header.innerHTML=`
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="index.html"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                <a  href="dashboard.html">
+                </span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16" style="margin-left: -8.5px;">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+              </svg></span>Dashboard</a>
                 </li>
-          
                 
+          
+              <li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
                         <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
                       </svg>Insumos
                         <span class="category__btn transparent-btn" title="Open list">
@@ -35,16 +39,19 @@ header.innerHTML=`
                         </span>
                     </a>
                     <ul class="cat-sub-menu">
-                       
+                      
                         <li>
                             <a href="Listar-Insumos.html">Listar Insumos</a>
                         </li>
-                   
+                       
                     </ul>
                 </li>
                 <li>
                     <a class="show-cat-btn" href="##">
-                        <span class="icon paper" aria-hidden="true"></span>Ficha Técnica
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-clipboard2-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
+                    <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+                    <path d="M3.5 1h.585A1.498 1.498 0 0 0 4 1.5V2a1.5 1.5 0 0 0 1.5 1.5h5A1.5 1.5 0 0 0 12 2v-.5c0-.175-.03-.344-.085-.5h.585A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1Z"/>
+                  </svg>Ficha Técnica
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -55,14 +62,14 @@ header.innerHTML=`
                       <li>
                           <a href="Listar-Ficha-Tecnica.html">Listar Ficha Técnica</a>
                       </li>
-                     
+                    
                   </ul>
               </li>
                 <li>
                     <a class="show-cat-btn" href="##">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
                     <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
-                </svg>Productos
+                </svg> Productos
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>
@@ -79,18 +86,18 @@ header.innerHTML=`
                     <a class="show-cat-btn" href="##">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="22" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16" style="margin-left: -10px;">
                     <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
-                  </svg>Compras
+                  </svg> Compras
                       <span class="category__btn transparent-btn" title="Open list">
                           <span class="sr-only">Open list</span>
                           <span class="icon arrow-down" aria-hidden="true"></span>
                       </span>
                   </a>
                   <ul class="cat-sub-menu">
-                     
+                      
                       <li>
                           <a href="Listar-Compras.html">Listar Compras</a>
                       </li>
-                    
+                   
                   </ul>
               </li>
                   <a class="show-cat-btn" href="##">
@@ -113,10 +120,9 @@ header.innerHTML=`
                 </ul>
             </li>
                   <a class="show-cat-btn" href="##">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="20" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16" style="margin-left: -10px;">
-                  <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                </svg>Clientes
+                  <svg xmlns="http://www.w3.org/2000/svg" width="42" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+</svg> Clientes
                     <span class="category__btn transparent-btn" title="Open list">
                         <span class="sr-only">Open list</span>
                         <span class="icon arrow-down" aria-hidden="true"></span>
@@ -134,23 +140,21 @@ header.innerHTML=`
                   </li>
                 </ul>
             </li>
-                    <a href="comments.html">
-                        <span class="icon message" aria-hidden="true"></span>
-                        Comments
-                    </a>
+                   
                     <span class="msg-counter">7</span>
                 </li>
             </ul>
             <span class="system-menu__title">system</span>
-            <ul class="sidebar-body-menu">
-                <li>
-                    <a href="appearance.html"><span class="icon edit" aria-hidden="true"></span>Appearance</a>
-                </li>
+            <ul class="sidebar-body-menu">                
                 
-                
-                <li>
-                    <a href="##"><span class="icon setting" aria-hidden="true"></span>Settings</a>
-                </li>
+            <a class="show-cat-btn" href="##">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="20" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16" style="margin-left: -7.5px;">
+  <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+</svg>Configuración
+              <span class="category__btn transparent-btn" title="Open list">
+                  <span class="sr-only">Open list</span>
+                  <span class="icon arrow-down" aria-hidden="true"></span>
+              </span>
             </ul>
         </div>
     </div>
