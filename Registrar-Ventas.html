@@ -39,7 +39,7 @@
   <div class="card" style="width: 70%;">
 
     <div class="card-body">
-   <form action="" method="get">
+   <form action="" method="post">
     <div class="text-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -50,14 +50,14 @@
       <div class="col-3" style="margin-left: 70px;">
         <label for="inputEmail4" class="form-label">DNI Cliente(*)</label>
 
-        <input type="text" class="form-control" placeholder="No. Documento" id="cliente">
+        <input type="text" class="form-control" placeholder="No. Documento" name="cliente" id="cliente">
       </div>
 
       <div class="form-row">
       <div class="col-xs-4" style="margin-left: px;">
         <label for="inputEmail4" class="form-label">Tipo Comprobante(*)</label>
 
-        <select type="select" class="form-control" placeholder="Tipo Comprobante" id="comprobante">
+        <select type="select" class="form-control" placeholder="Tipo Comprobante" name="comprobante" id="comprobante">
           <option value="ninguno">Ninguno</option>
           <option value="ninguno">Factura</option>
           <option value="ninguno">Electrónico</option>
@@ -72,7 +72,7 @@
       <div class="col-5"  style="margin-left: -55px;">
         <label for="inputEmail4" class="form-label">Fecha</label>
 
-        <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
+        <input type="date" class="form-control" placeholder="Fecha" name="fecha" id="fecha">
        
         <div style="margin: 5%;">
         <h6 style="color: red">Campos obligatorios(*)</h6>
@@ -89,14 +89,15 @@
       <div class="col-4" style="margin-left: 68px;">
         <label for="inputEmail4" class="form-label">Total(*)</label>
 
-        <input type="text" class="form-control" placeholder="Total" id="total">
+        <input type="text" class="form-control" placeholder="Total" name="total" id="total" disabled value="12000">
             </div>      
     </div>
 
     <div class="col-12 row mr-2" style="margin-left: 25%;">
-      <a href="Listar-Ventas.html"><button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button></a>
+      <button type="button" class="btn btn-primary mr-5" onclick="validarVenta()" >Registrar</button>
       <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
     </div>
+
   </form>
 </div>
   </div>

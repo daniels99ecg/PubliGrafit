@@ -5,7 +5,7 @@ header.innerHTML=`
         <div class="sidebar-head">
             <a href="dashboard.html" class="logo-wrapper" title="Home">
                 <span class="sr-only">Home</span>
-                <span class="icon logo" aria-hidden="true"></span>
+                <span class="icon logo" aria-hidden="true" style="margin-left: -7.5px;"></span>
                 <div class="logo-text">
                     <span class="logo-title">PubliGrafit</span>
                   
