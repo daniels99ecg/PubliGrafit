@@ -129,3 +129,76 @@ validarCliente=() => {
     // }else{
     //     alert("se ha creado correctamente");
     // }
+
+
+    //Validacion de insumos Registar...
+validarInsumos =() =>{
+    
+    let nombre= document.getElementById("nombre").value;
+    let precio = document.getElementById("precio").value;
+    precio=parseInt(precio);
+    let cantidad = document.getElementById("cantidad").value;
+    cantidad=parseInt(cantidad);
+    let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+    
+
+    if(nombre =="" || precio =="" || cantidad =="" ){
+        tabla=["#nombre","#precio","#cantidad"];
+        for (const i in tabla) {
+            document.querySelector(tabla[i]).style.borderColor="red";
+                        document.querySelector(tabla[i]).placeholder="Campo Requerido";
+                
+        }
+    }else if((!Caracteres.test(nombre))){
+        document.querySelector('#nombre').style.borderColor="red";
+        document.querySelector('#nombre').value="Ingrese solo letras en el campo";
+    }else if((!Number.isInteger(cantidad))){
+        document.querySelector('#cantidad').style.borderColor="red";
+        document.querySelector('#cantidad').value="Ingrese solo números";
+    }else if((!Number.isInteger(precio))){
+        document.querySelector('#precio').style.borderColor="red";
+        document.querySelector('#precio').value="Ingrese solo números";
+    }else{
+        tabla=["#nombre","#precio","#cantidad"];
+        for (const i in tabla) {
+        document.querySelector(tabla[i]).style.borderColor="green";
+        }
+    }
+}
+
+
+//Validacion de insumos actualizar.
+validarAInsumos =() =>{
+     
+let nombre= document.getElementById("nombre").value;
+let precio = document.getElementById("precio").value;
+precio=parseInt(precio);
+let cantidad = document.getElementById("cantidad").value;
+cantidad=parseInt(cantidad);
+let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+
+
+if(nombre =="" || precio =="" || cantidad =="" ){
+    tabla=["#nombre","#precio","#cantidad"];
+    for (const i in tabla) {
+        document.querySelector(tabla[i]).style.borderColor="red";
+        document.querySelector(tabla[i]).placeholder="Campo Requerido";
+            
+    }
+}else if((!Caracteres.test(nombre))){
+    document.querySelector('#nombre').style.borderColor="red";
+    document.querySelector('#nombre').value="Ingrese solo letras en el campo";
+}else if((!Number.isInteger(cantidad))){
+    document.querySelector('#cantidad').style.borderColor="red";
+    document.querySelector('#cantidad').value="Ingrese solo números";
+}else if((!Number.isInteger(precio))){
+    document.querySelector('#precio').style.borderColor="red";
+    document.querySelector('#precio').value="Ingrese solo números";
+}else{
+    tabla=["#nombre","#precio","#cantidad"];
+    for (const i in tabla) {
+    document.querySelector(tabla[i]).style.borderColor="green";
+    }
+}
+}
+    
