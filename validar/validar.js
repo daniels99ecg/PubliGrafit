@@ -14,37 +14,67 @@ function validart(){
     
     if(vdni=="" || vnombre=="" || vapellido==""||vcorreo==""||vcontrasena==""||vconfirmar==""){
 
-        tabla=["#dni", "#nombre","#apellido", "#correo", "#contrasena", "#confirmar"];
-        for (const i in tabla) {
-           document.querySelector(tabla[i]).style.borderColor="red";
-           document.querySelector(tabla[i]).placeholder="Campo Requerido";
-        }
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacios',
+            text: 'Por favor ingresar datos!',
+            
+          })
 
 
       
-    }else if(emailRegex.test(vcorreo.value)){
-        document.querySelector('#correo').style.borderColor="red";
-        document.querySelector('#correo').value="Ingrese un correo valido";
+    }else if(!vcorreo.includes("@") || !vcorreo.includes(".com")){
+        Swal.fire({
+            icon: 'error',
+            title: 'Correo no valido',
+            text: 'Por favor ingresar un correo valido!',
+            
+          })
     }else if(vcontrasena!==vconfirmar){
-       tabla=["#contrasena","#confirmar" ];
-       for (const i in tabla) {
-        document.querySelector(tabla[i]).style.borderColor="red";
-        document.querySelector(tabla[i]).value="Las contraseñas no son iguales";
-     }
+        Swal.fire({
+            icon: 'error',
+            title: 'La contraseña no coincide ',
+            text: 'Verifique que sus contraseñas sean iguales!',
+            
+          })
 
-    }
-    
-    else{
-        tabla=["#dni", "#nombre","#apellido", "#correo", "#contrasena", "#confirmar"];
-        for (const i in tabla) {
-           document.querySelector(tabla[i]).style.borderColor="green";
-         
+    }else{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Confirmar en envio del formulario?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar!',
+            cancelButtonText: 'Cancelar!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Registro Enviado!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Se cancelo el envio',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
         }
     }
-
-  
-
-}
 
 // Validar Ventas Andrés
 

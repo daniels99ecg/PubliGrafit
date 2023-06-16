@@ -1804,7 +1804,8 @@ button.disabled:focus {
 }
 
 .roles{
-  width: 45%;
+  min-width: 25%;
+  max-width: 28%;
   border:1px solid black;
   border-radius: 10px;
   margin: 2%;
@@ -1813,14 +1814,22 @@ button.disabled:focus {
   margin-left: 30%;
   
 }
+.roles2{
+
+
+  
+  max-width: 80%;
+  margin-left: 3%;
+  
+}
 .form-check{
   margin-left: 10%;
 
 }
 .card{
-  width: 75%;
+  width: 65%;
   margin: 0;
-  margin-left: 1%;
+  margin-left: 14%;
   margin-top: 3%; 
   border-radius: 15px;
 
