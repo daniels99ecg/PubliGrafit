@@ -236,7 +236,7 @@ validarAdd =() =>{
     });       
 }
 
-eliminarVenta =() =>{
+function eliminarVenta(){
   
   Swal.fire({
       title: 'Are you sure?',
