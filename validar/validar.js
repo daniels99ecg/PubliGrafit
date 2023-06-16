@@ -148,16 +148,17 @@ validarVenta =() =>{
 }
 
 validarVenta2 =() =>{
-  
+    
   let cliente = document.getElementById("cliente").value;
   cliente = parseInt(cliente);
   let comprobante = document.getElementById("comprobante").value;
   let fecha = document.getElementById("fecha").value;
   let total = document.getElementById("total").value;
+  let cantidad = document.getElementById("cantidad").value;
   
   let regex = /^\d+$/;
 
-  if(cliente =="" || comprobante =="" || fecha =="" || total == ""){
+  if(cliente =="" || comprobante =="" || fecha =="" || total =="" || cantidad ==""){
 
       Swal.fire({
           icon: 'error',
@@ -215,6 +216,7 @@ validarVenta2 =() =>{
 }
 }
 
+
 validarAdd =() =>{
 
   Swal.fire({
@@ -236,26 +238,28 @@ validarAdd =() =>{
     });       
 }
 
-function eliminarVenta(){
-  
+
+eliminarVenta =() =>{
+    
   Swal.fire({
-      title: 'Are you sure?',
+      title: 'Eliminar Registro?',
       text: "You won't be able to revert this!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Aceptar'
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
-          'Deleted!',
+          'Registro Eliminado',
           'Your file has been deleted.',
           'success'
         )
       }
     })
 }
+
 
 // Validar Clientes
 
