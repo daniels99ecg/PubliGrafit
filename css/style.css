@@ -4459,3 +4459,12 @@ left: 89.5%;
 select{
   border-radius: 3px;
   }
+
+
+  #add{
+    position: relative;
+    color: green;
+    left: 270px;
+    bottom: -5px;
+    border: transparent;
+  }
