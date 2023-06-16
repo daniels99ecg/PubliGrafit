@@ -36,11 +36,10 @@
     </nav>
    
    <script src="validar/validar.js"></script>
-   <form action="Listar-Clientes.html" method="post">
   <div class="card" style="width: 64%;">
 
     <div class="card-body">
-  
+   <form action="Listar-Clientes.html" method="post">
     <div class="text-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
         <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
@@ -48,74 +47,67 @@
     </svg>
 </div>
   
-    <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -40px;">
-        <label for="inputEmail4" class="form-label" >DNI(*)</label>
+<div class="form-row">
+  <div class="col-xs-4" style="margin-left: -40px;">
+    <label for="inputEmail4" class="form-label" >DNI(*)</label>
 
-        <input type="text" class="form-control" placeholder="Dni" aria-label="First name" id="dni">
-      </div>
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Nombre(*)</label>
+    <input type="text" class="form-control" placeholder="No. Documento" aria-label="First name" id="dni">
+  </div>
+  <div class="col-xs-4" style="margin-left: 110px;">
+    <label for="inputEmail4" class="form-label">Nombre(*)</label>
 
-        <input type="text" class="form-control" placeholder="Nombres" aria-label="Last name" id="nombre">
-      </div>
-      </div>
+    <input type="text" class="form-control" placeholder="Nombres" aria-label="Last name" id="nombre">
+  </div>
+  </div>
 
 
-     <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -40px;">
-        <label for="inputEmail4" class="form-label">Apellido(*)</label>
+ <div class="form-row">
+  <div class="col-xs-4" style="margin-left: -40px;">
+    <label for="inputEmail4" class="form-label">Apellido(*)</label>
 
-        <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" id="apellido">
-      </div>
+    <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" id="apellido">
+  </div>
 
-      <div class="col-xs-4">
-        <label for="inputEmail4" class="form-label">Teléfono(*)</label>
+  <div class="col-xs-4" style="margin-left: 110px;"> 
+    <label for="inputEmail4" class="form-label">Teléfono(*)</label>
+
+    <input type="text" class="form-control" placeholder="Teléfono" aria-label="telefono">
+    </div>
+
+  </div> 
   
-        <input type="text" class="form-control" placeholder="Teléfono" aria-label="telefono">
-      </div>
-      </div>
-
-      <div class="form-row">
-    <div class="col-xs-4" style="margin-left: -40px;"> 
+  <div class="form-row">
+    <div class="col-xs-4" style="margin-left: -40px;">
       <label for="inputEmail4" class="form-label">Dirección(*)</label>
-  
+
       <input type="text" class="form-control" placeholder="Dirección" aria-label="direccion">
-      </div>
-      
-      <div class="form-row">
-      <div class="col-xs-4" style="margin-left: -140px;">
-        <label for="inputEmail4" class="form-label">Correo Electrónico(*)</label>
+    </div>
+  
+  <div class="form-row">
+  <div class="col-xs-4" style="margin-left: 10px;">
+    <label for="inputEmail4" class="form-label">Correo Electrónico(*)</label>
 
-        <input type="email" class="form-control" placeholder="Email" aria-label="email">
-      </div>
-     </div>
-     </div>
+    <input type="email" class="form-control" placeholder="Email" aria-label="email">
+  </div>
+ </div>
+ </div>
 
-      <div class="col-12 row mr-5">
-      <button type="submit" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button>
-      <button type="button" class="btn btn-danger ">Cancelar</button>
+      <div class="col-12 row mr-5" style="margin-left: 33%;">
+      <a href="Listar-Clientes.html"><button type="button" class="btn btn-primary mr-5" onclick="validarCliente2()">Actualizar</button></a>
+      <a href="Listar-Clientes.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
      </div>
     
  </div>
   </div>
 </form>
-    <!-- ! Footer -->
-    <footer class="footer">
-  <div class="container footer--flex">
-    <div class="footer-start">
-      <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank"
-          rel="noopener noreferrer">elegant-dashboard.com</a></p>
-    </div>
-    <ul class="footer-end">
-      <li><a href="##">About</a></li>
-      <li><a href="##">Support</a></li>
-      <li><a href="##">Puchase</a></li>
-    </ul>
-  </div>
-</footer>
+
   </div>
 </div>
+
+<!-- codigo de modal -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <!-- Chart library -->
 <script src="./plugins/chart.min.js"></script>
 <!-- Icons library -->

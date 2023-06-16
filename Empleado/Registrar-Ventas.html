@@ -39,7 +39,7 @@
   <div class="card" style="width: 70%;">
 
     <div class="card-body">
-   <form action="" method="get">
+   <form action="" method="post">
     <div class="text-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -50,85 +50,97 @@
       <div class="col-3" style="margin-left: 70px;">
         <label for="inputEmail4" class="form-label">DNI Cliente(*)</label>
 
-        <input type="text" class="form-control" placeholder="No. Documento" id="cliente">
+        <input type="text" class="form-control" placeholder="No. Documento" name="cliente" id="cliente">
       </div>
 
       <div class="form-row">
       <div class="col-xs-4" style="margin-left: px;">
         <label for="inputEmail4" class="form-label">Tipo Comprobante(*)</label>
 
-        <select type="select" class="form-control" placeholder="Tipo Comprobante" id="comprobante">
+        <select type="select" class="form-control" placeholder="Tipo Comprobante" name="comprobante" id="comprobante">
           <option value="ninguno">Ninguno</option>
           <option value="ninguno">Factura</option>
           <option value="ninguno">Electrónico</option>
       </select>
       </div>
 
-
-      
     </div>
 
     <div class="row">
       <div class="col-5"  style="margin-left: -55px;">
         <label for="inputEmail4" class="form-label">Fecha</label>
 
-        <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
-       
-        <div style="margin: 5%;">
-        <h6 style="color: red">Campos obligatorios(*)</h6>
-      </div>
+        <input type="date" class="form-control" placeholder="Fecha" name="fecha" id="fecha">
 
       </div>
-
-      <a href="Registrar-Ventas.html"></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="dato5 bi bi-plus-circle" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-      </svg>
+  
+      <div>
+    <button type="button" id="add" onclick="validarAdd()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+  </svg></button>
+</div>
 
       
       <div class="col-4" style="margin-left: 68px;">
         <label for="inputEmail4" class="form-label">Total(*)</label>
 
-        <input type="text" class="form-control" placeholder="Total" id="total">
+        <input type="text" class="form-control" placeholder="Total" name="total" id="total" disabled value="16660">
             </div>      
     </div>
 
-    <div class="col-12 row mr-2" style="margin-left: 25%;">
-      <a href="Listar-Ventas.html"><button type="button" class="btn btn-primary mr-5" onclick="validart()">Registrar</button></a>
-      <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
-    </div>
-  </form>
 </div>
   </div>
 
-  <table class="table table-hover ml-5">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
         <th scope="col">Cantidad</th>
-        <th scope="col">IVA</th>
+        <th scope="col" name="iva" id="iva">IVA</th>
         <th scope="col">Subtotal</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">0001</th>
-        <td>Talonarios</td>
-        <td>15</td>
-        <td>16%</td>
-        <td>208.800</td>
-           <a href="Actualizar-Usuario.html"> 
+        <td><select name="producto" id="producto">
+          <option value=""></option>
+          <option value="">Cuadernos</option>
+          <option value="">Pendones</option>
+          <option value="">Talonarios</option>
+        </select></td>
+        <td><input id="precio" name="precio" type="number" value="7000" disabled style="width: 70px;"></td>
+        <td><input id="cantidad" name="cantidad" type="number" style="width: 70px;"></td>
+        <td><select name="iva" id="iva">
+          <option value=""></option>
+          <option value="">19%</option>
+          <option value="">16%</option>
+          <option value="">14%</option>
+        </select></td>
+        <td><input id="subtotal" name="subtotal" type="number" value="14000" disabled style="width: 70px;"></td>
         </td>
       </tr>
 
     </tbody>
   </table>
-
-    <!-- ! Footer -->
    
+
+  <div class="col-12 row mr-2" style="margin-left: 320px;">
+    <button type="button" class="btn btn-primary mr-5" onclick="validarVenta()" >Registrar</button>
+    <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
+  </div>
+
+</form>
   </div>
 </div>
+
+<!-- codigo de modal -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <!-- Chart library -->
 <script src="./plugins/chart.min.js"></script>
 <!-- Icons library -->

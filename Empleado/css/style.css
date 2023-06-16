@@ -1799,11 +1799,13 @@ button.disabled:focus {
   border: none; 
   border-bottom: 
     1px solid #000000;
+  line-height: normal;
 
 }
 
 .roles{
-  width: 45%;
+  min-width: 25%;
+  max-width: 28%;
   border:1px solid black;
   border-radius: 10px;
   margin: 2%;
@@ -1812,19 +1814,29 @@ button.disabled:focus {
   margin-left: 30%;
   
 }
+.roles2{
+
+
+  
+  max-width: 80%;
+  margin-left: 3%;
+  
+}
 .form-check{
   margin-left: 10%;
 
 }
 .card{
-  margin-left: 15%;
-  margin-top: 20px; 
+  width: 65%;
+  margin: 0;
+  margin-left: 14%;
+  margin-top: 3%; 
   border-radius: 15px;
 
 }
 
 .form-row{
-  margin-left: 23% ;
+  margin-left: 15% ;
 }
 .img-fluid{
   width: 150px;
@@ -4394,6 +4406,18 @@ right: 173%;
   right: -45px;
 }
 
+.repo{
+position: relative;
+top: -4.4%;
+left: 89.5%;
+}
+
+#trbox{
+  position: relative;
+  top: 50%;
+  left: 1%;
+}
+
 :root {
   --color-green: #00a878;
   --color-red: red;
@@ -4433,5 +4457,14 @@ right: 173%;
 }
 
 select{
-border-radius: 15px;
-}
+  border-radius: 3px;
+  }
+
+
+  #add{
+    position: relative;
+    color: green;
+    left: 270px;
+    bottom: -5px;
+    border: transparent;
+  }
