@@ -72,74 +72,30 @@
             <label for="inputEmail4" class="form-label">Fecha</label>
     
             <input type="date" class="form-control" placeholder="Fecha"  id="fecha">
-           
-            <div style="margin: 5%;">
-            <h6 style="color: red">Campos obligatorios(*)</h6>
-          </div>
     
-          </div>
-    
-          <a href="Registrar-Ventas.html"></a><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="dato5 bi bi-plus-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-          </svg>
-    
+          </div>    
           
-          <div class="col-4" style="margin-left: 68px;">
+          <div class="col-4" style="margin-left: 92px;">
             <label for="inputEmail4" class="form-label">Total(*)</label>
     
-            <input type="text" class="form-control" placeholder="Total" id="total">
+            <input type="text" class="form-control" placeholder="Total" id="total" disabled value="12000">
                 </div>      
         </div>
 
     <div class="col-12 row mr-2" style="margin-left: 24%;">
-      <a href="Listar-Ventas.html"><button type="button" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button></a>
+      <button type="button" class="btn btn-primary mr-5" onclick="validarVenta2()">Actualizar</button></a>
       <a href="Listar-Ventas.html"><button type="button" class="btn btn-danger ">Cancelar</button></a>
     </div>
   </form>
 </div>
   </div>
-
-  <table class="table table-hover ml-5">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Producto</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">IVA</th>
-        <th scope="col">Subtotal</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">0001</th>
-        <td>Talonarios</td>
-        <td>15</td>
-        <td>16%</td>
-        <td>180.000</td>
-           <a href="Actualizar-Usuario.html"> 
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
-    <!-- ! Footer -->
-    <footer class="footer">
-  <div class="container footer--flex">
-    <div class="footer-start">
-      <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank"
-          rel="noopener noreferrer">elegant-dashboard.com</a></p>
-    </div>
-    <ul class="footer-end">
-      <li><a href="##">About</a></li>
-      <li><a href="##">Support</a></li>
-      <li><a href="##">Puchase</a></li>
-    </ul>
-  </div>
-</footer>
   </div>
 </div>
+
+<!-- codigo de modal -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <!-- Chart library -->
 <script src="./plugins/chart.min.js"></script>
 <!-- Icons library -->

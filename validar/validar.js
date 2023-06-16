@@ -80,66 +80,393 @@ function validart(){
 
 validarVenta =() =>{
     
-    let cliente = document.getElementById("cliente").value;
-    cliente = parseInt(cliente);
-    let comprobante = document.getElementById("comprobante").value;
-    let fecha = document.getElementById("fecha").value;
-    let total = document.getElementById("total").value;
-    
+  let cliente = document.getElementById("cliente").value;
+  cliente = parseInt(cliente);
+  let comprobante = document.getElementById("comprobante").value;
+  let fecha = document.getElementById("fecha").value;
+  let total = document.getElementById("total").value;
+  let cantidad = document.getElementById("cantidad").value;
+  
+  let regex = /^\d+$/;
 
-    if(cliente =="" || comprobante =="" || fecha =="" || total ==""){
-        alert("Los campos estan vacios");
-    }else if(!Number.isInteger(cliente)){
-        alert("DNI Cliente es incorrecto, ingrese solo números");
-    }else{
-        alert("Venta registrada");
-    }
+  if(cliente =="" || comprobante =="" || fecha =="" || total =="" || cantidad ==""){
+
+      Swal.fire({
+          icon: 'error',
+          title: 'Campos Vacíos',
+          text: 'Por favor ingresar datos!',
+              
+      })
+        
+  }else if(!regex.test(cliente)){
+      Swal.fire({
+          icon: 'error',
+          title: 'DNI no válido',
+          text: 'Por favor ingresar valores alfanuméricos',
+              
+      })
+  
+  }else{
+      const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+      },
+          buttonsStyling: false
+      })
+            
+      swalWithBootstrapButtons.fire({
+          title: 'Confirmar el envío del formulario?',
+          text: "Your file will be saved!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar',
+          cancelButtonText: 'Cancelar',
+          Buttons: true
+      }).then((result) => {
+  if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+          'Registro Exitoso!',
+          'Your file has been registered.',
+          'success'
+       )
+  } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+      ) {
+      swalWithBootstrapButtons.fire(
+          'Registro Cancelado',
+          'Registration not completed',
+          'error'
+          )
+          
+      }
+      
+  })
+  
+}
 }
 
-//     var hoy             = new Date();
-// var fechaFormulario = new Date('2016-11-10');
+validarVenta2 =() =>{
+  
+  let cliente = document.getElementById("cliente").value;
+  cliente = parseInt(cliente);
+  let comprobante = document.getElementById("comprobante").value;
+  let fecha = document.getElementById("fecha").value;
+  let total = document.getElementById("total").value;
+  
+  let regex = /^\d+$/;
 
-// // Comparamos solo las fechas => no las horas!!
-// hoy.setHours(0,0,0,0);  // Lo iniciamos a 00:00 horas
+  if(cliente =="" || comprobante =="" || fecha =="" || total == ""){
 
-// if (hoy <= fechaFormulario) {
-
-//   console.log("Fecha a partir de hoy");
-// }
-// else {
-//   console.log("Fecha pasado");
-// }
-
-// Validar Clientes Andrés
-validarCliente=() => {
-    
-    let dni = document.getElementById("dni").value;
-    dni = parseInt(dni);
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let telefono = document.getElementById("telefono").value;
-    telefono = parseInt(telefono);
-    let direccion = document.getElementById("direccion").value;
-    let email = document.getElementById("email").value;
-    
-    let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
-    let email_validar = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      Swal.fire({
+          icon: 'error',
+          title: 'Campos Vacíos',
+          text: 'Por favor ingresar datos!',
+              
+      })
         
-    if(dni =="" || nombre =="" || apellido =="" || telefono =="" || direccion =="" || email ==""){
-        alert("Los campos están vacios");
-    }else if(!Number.isInteger(dni)){
-        alert("DNI es incorrecto, ingrese solo números");
-    }else if(!Caracteres.test(nombre)){
-        alert("Nombre es incorrecto, ingrese solo letras");
-    }else if(!Caracteres.test(apellido)){
-        alert("Apellido es incorrecto ingrese solo letras")
-    }else if(!Number.isInteger(telefono)){
-        alert("Teléfono es incorrecto, ingrese solo números");
-    }else if(!email_validar.test(email)){
-        alert("Correo electrónico incorrecto")
-    }else{
-        alert("Cliente registrado");
-    }
+  }else if(!regex.test(cliente)){
+      Swal.fire({
+          icon: 'error',
+          title: 'DNI no válido',
+          text: 'Por favor ingresar valores alfanuméricos',
+              
+      })
+  
+  }else{
+      const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+      },
+          buttonsStyling: false
+      })
+            
+      swalWithBootstrapButtons.fire({
+          title: 'Confirmar el envío del formulario?',
+          text: "Your file will be updated!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar',
+          cancelButtonText: 'Cancelar',
+          Buttons: true
+      }).then((result) => {
+  if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+          'Actualización Exitosa!',
+          'Your file has been updated.',
+          'success'
+       )
+  } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+      ) {
+      swalWithBootstrapButtons.fire(
+          'Actualización Cancelada',
+          'Your file is safe :)',
+          'error'
+          )
+          
+      }
+      
+  })
+  
+}
+}
+
+validarAdd =() =>{
+
+  Swal.fire({
+      title: 'Quieres agregar más productos?',
+      text: "You can continue adding products!",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Agregar',
+      denyButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Added product', 'Select more products', 'success');
+      } else if (result.isDenied) {
+        Swal.fire('Saved sale', 'Saved and ready to pay', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelado', 'Oops!', 'info');
+      }
+    });       
+}
+
+eliminarVenta =() =>{
+  
+  Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+}
+
+// Validar Clientes
+
+validarCliente =() => {
+  
+  let dni = document.getElementById("dni").value;
+  dni = parseInt(dni);
+  let nombre = document.getElementById("nombre").value;
+  let apellido = document.getElementById("apellido").value;
+  let telefono = document.getElementById("telefono").value;
+  telefono = parseInt(telefono);
+  let direccion = document.getElementById("direccion").value;
+  let email = document.getElementById("email").value;
+  
+  let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+  let regex2 = /^\d+$/;
+  let regex3 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+  if(dni =="" || nombre =="" || apellido =="" || telefono == "" || direccion =="" || email ==""){
+
+      Swal.fire({
+          icon: 'error',
+          title: 'Campos Vacíos',
+          text: 'Por favor ingresar datos!',
+              
+      })
+        
+  }else if(!regex2.test(dni)){
+      Swal.fire({
+          icon: 'error',
+          title: 'DNI no válido',
+          text: 'Por favor ingresar valores alfanuméricos',
+              
+      })
+
+  }else if(!regex.test(nombre)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Nombre no válido',
+          text: 'Por favor ingresar solo letras',
+              
+      }) 
+      
+  }else if(!regex.test(apellido)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Apellido no válido',
+          text: 'Por favor ingresar solo letras',
+              
+      })   
+   
+  }else if(!regex2.test(telefono)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Teléfono no válido',
+          text: 'Por favor ingresar solo números',
+              
+      })
+      
+  }else if(!regex3.test(email)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Correo electrónico no válido',
+          text: 'Por favor ingresar un correo electrónico válido!',
+          
+        })     
+  
+  }else{
+      const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+      },
+          buttonsStyling: false
+      })
+            
+      swalWithBootstrapButtons.fire({
+          title: 'Confirmar el envío del formulario?',
+          text: "Your file will be saved!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar',
+          cancelButtonText: 'Cancelar',
+          Buttons: true
+      }).then((result) => {
+  if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+          'Registro Exitoso!',
+          'Your file has been registered.',
+          'success'
+       )
+  } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+      ) {
+      swalWithBootstrapButtons.fire(
+          'Registro Cancelado', 
+          'Registration not completed',
+          'error'
+          )
+          
+      }
+      
+  })
+  
+}
+}
+
+validarCliente2 =() => {
+  
+  let dni = document.getElementById("dni").value;
+  dni = parseInt(dni);
+  let nombre = document.getElementById("nombre").value;
+  let apellido = document.getElementById("apellido").value;
+  let telefono = document.getElementById("telefono").value;
+  telefono = parseInt(telefono);
+  let direccion = document.getElementById("direccion").value;
+  let email = document.getElementById("email").value;
+  
+  let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+  let regex2 = /^\d+$/;
+  let regex3 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+  if(dni =="" || nombre =="" || apellido =="" || telefono == "" || direccion =="" || email ==""){
+
+      Swal.fire({
+          icon: 'error',
+          title: 'Campos Vacíos',
+          text: 'Por favor ingresar datos!',
+              
+      })
+        
+  }else if(!regex2.test(dni)){
+      Swal.fire({
+          icon: 'error',
+          title: 'DNI no válido',
+          text: 'Por favor ingresar valores alfanuméricos',
+              
+      })
+
+  }else if(!regex.test(nombre)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Nombre no válido',
+          text: 'Por favor ingresar solo letras',
+              
+      }) 
+      
+  }else if(!regex.test(apellido)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Apellido no válido',
+          text: 'Por favor ingresar solo letras',
+              
+      })   
+   
+  }else if(!regex2.test(telefono)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Teléfono no válido',
+          text: 'Por favor ingresar solo números',
+              
+      })
+      
+  }else if(!regex3.test(email)){
+      Swal.fire({
+          icon: 'error',
+          title: 'Correo electrónico no válido',
+          text: 'Por favor ingresar un correo electrónico válido!',
+          
+        })     
+  
+  }else{
+      const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+      },
+          buttonsStyling: false
+      })
+            
+      swalWithBootstrapButtons.fire({
+          title: 'Confirmar el envío del formulario?',
+          text: "Your file will be saved!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar',
+          cancelButtonText: 'Cancelar',
+          Buttons: true
+      }).then((result) => {
+  if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+          'Actualización Exitosa!',
+          'Your file has been updated.',
+          'success'
+       )
+  } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+      ) {
+      swalWithBootstrapButtons.fire(
+          'Actualización Cancelada',
+          'Your file is safe :)',
+          'error'
+          )
+          
+      }
+      
+  })
+  
+}
 }
 
 
@@ -466,4 +793,86 @@ validarFicha =() =>{
           })
     }
     }
+
+
+    //Validación Compras Valeria 
+function validarCompra (){
+  const Proveedor=document.getElementById("Proveedor").value;
+  const Fecha=document.getElementById("Fecha").value;
+  const Cantidad=document.getElementById("Cantidad").value;
+  const Total=document.getElementById("Total").value;
+  
+  
+  
+  if(Proveedor=="" || Fecha=="" || Cantidad=="" || Total==""){
+  
+      Swal.fire({
+          icon: 'error',
+          title: 'Campos Vacios',
+          text: 'Por favor ingresar datos!',
+          
+        })
+  
+   Campo = ["#Proveedor", "#Fecha", "#Cantidad", "#Total"];
+  
+   Swal.fire({
+      icon: 'error',
+      title: 'Campos Vacios',
+      text: 'Por favor ingresar datos!',
+      
+    })
+  }else if(!Number.isInteger(Cantidad)){
+      Swal.fire({
+          icon: 'error',
+          title: 'No se pueden ingresar letras',
+          text: 'Por favor ingresar datos!',
+          
+        })
+  }else if(Number.isInteger(Total)){
+      document.querySelector("#Total").style.borderColor="red";
+      Swal.fire({
+          icon: 'error',
+          title: 'No se pueden ingresar letras',
+          text: 'Por favor ingresar datos!',
+          
+        })
+  }else{
+  
+      const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+          },
+          buttonsStyling: false
+        })
+        
+        swalWithBootstrapButtons.fire({
+          title: 'Confirmar el envio del formulario?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Aceptar!',
+          cancelButtonText: 'Cancelar!',
+          Buttons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire(
+              'Registro Enviado!',
+              'Your file has been deleted.',
+              'success'
+            )
+          } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+          ) {
+            swalWithBootstrapButtons.fire(
+              'Se cancelo el envio',
+              'Your imaginary file is safe :)',
+              'error'
+            )
+          }
+        })
+  }
+  }
+  
     
