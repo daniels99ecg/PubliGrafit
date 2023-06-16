@@ -1,7 +1,7 @@
 // Validar Usuarios Daniel
 function validart(){
 
-    let vdni=document.getElementById("dni").value;
+    
     let vnombre=document.getElementById("nombre").value;
     let vapellido=document.getElementById("apellido").value;
     
@@ -12,7 +12,7 @@ function validart(){
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
 
     
-    if(vdni=="" || vnombre=="" || vapellido==""||vcorreo==""||vcontrasena==""||vconfirmar==""){
+    if( vnombre=="" || vapellido==""||vcorreo==""||vcontrasena==""||vconfirmar==""){
 
         Swal.fire({
             icon: 'error',
@@ -48,13 +48,13 @@ function validart(){
           })
           
           swalWithBootstrapButtons.fire({
-            title: 'Confirmar en envio del formulario?',
+            title: 'Confirmar el envio del formulario?',
             text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Aceptar!',
             cancelButtonText: 'Cancelar!',
-            reverseButtons: true
+            Buttons: true
           }).then((result) => {
             if (result.isConfirmed) {
               swalWithBootstrapButtons.fire(
@@ -144,24 +144,9 @@ validarCliente=() => {
 
 
 
-    // if(n == "" || e == "" || p == "" || cp == ""){
-    //     alert("ingrese informacion en  los campos vacios");
-    // }else if (!letters.test(n)){
-    //     alert("nombre es incorrecto. ingrese solo letras")
-    // }else if(!email_val.test(e)){
-    //     alert("email es incorrecto. ingrese un correo valido")
-    // }else if(p!=cp){
-    //     alert("contraseñas no coinciden")
-    // }else if(document.getElementById("p1").value.length>12){
-    //     alert("tiene que tener maximo 12 caracteres")
-    // }else if(document.getElementById("p1").value.length<6){
-    //     alert("tiene que tener minimo 6 caracteres");
-    // }else{
-    //     alert("se ha creado correctamente");
-    // }
-
 
     //Validacion de insumos Registar...
+//Validacion de insumos Registar... Hayberth
 validarInsumos =() =>{
     
     let nombre= document.getElementById("nombre").value;
@@ -173,62 +158,312 @@ validarInsumos =() =>{
     
 
     if(nombre =="" || precio =="" || cantidad =="" ){
-        tabla=["#nombre","#precio","#cantidad"];
-        for (const i in tabla) {
-            document.querySelector(tabla[i]).style.borderColor="red";
-                        document.querySelector(tabla[i]).placeholder="Campo Requerido";
-                
-        }
-    }else if((!Caracteres.test(nombre))){
-        document.querySelector('#nombre').style.borderColor="red";
-        document.querySelector('#nombre').value="Ingrese solo letras en el campo";
-    }else if((!Number.isInteger(cantidad))){
-        document.querySelector('#cantidad').style.borderColor="red";
-        document.querySelector('#cantidad').value="Ingrese solo números";
-    }else if((!Number.isInteger(precio))){
-        document.querySelector('#precio').style.borderColor="red";
-        document.querySelector('#precio').value="Ingrese solo números";
-    }else{
-        tabla=["#nombre","#precio","#cantidad"];
-        for (const i in tabla) {
-        document.querySelector(tabla[i]).style.borderColor="green";
-        }
-    }
-}
-
-
-//Validacion de insumos actualizar.
-validarAInsumos =() =>{
-     
-let nombre= document.getElementById("nombre").value;
-let precio = document.getElementById("precio").value;
-precio=parseInt(precio);
-let cantidad = document.getElementById("cantidad").value;
-cantidad=parseInt(cantidad);
-let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
-
-
-if(nombre =="" || precio =="" || cantidad =="" ){
-    tabla=["#nombre","#precio","#cantidad"];
-    for (const i in tabla) {
-        document.querySelector(tabla[i]).style.borderColor="red";
-        document.querySelector(tabla[i]).placeholder="Campo Requerido";
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacios',
+            text: 'Por favor ingresar datos!',
             
+          })
+    }else if((!Caracteres.test(nombre))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no valido en el campo (Nombre)',
+            text: 'Por favor ingresar solo letras!',
+            
+          })
+    }else if((!Number.isInteger(cantidad))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no validos en el campo (Cantidad)',
+            text: 'Por favor ingresar solo numeros',
+            
+          })
+    }else if((!Number.isInteger(precio))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no validos en el campo (Precio)',
+            text: 'Por favor ingresar solo numeros',
+            
+          })
+    }else{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Confirmar el envio del formulario?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar!',
+            cancelButtonText: 'Cancelar!',
+            Buttons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Insumo Registrado!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Se cancelo el registro del insumo',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+        }
     }
-}else if((!Caracteres.test(nombre))){
-    document.querySelector('#nombre').style.borderColor="red";
-    document.querySelector('#nombre').value="Ingrese solo letras en el campo";
-}else if((!Number.isInteger(cantidad))){
-    document.querySelector('#cantidad').style.borderColor="red";
-    document.querySelector('#cantidad').value="Ingrese solo números";
-}else if((!Number.isInteger(precio))){
-    document.querySelector('#precio').style.borderColor="red";
-    document.querySelector('#precio').value="Ingrese solo números";
-}else{
-    tabla=["#nombre","#precio","#cantidad"];
-    for (const i in tabla) {
-    document.querySelector(tabla[i]).style.borderColor="green";
+
+
+//Validacion de insumos actualizar. Hayberth
+validarAInsumos =() =>{
+    let nombre= document.getElementById("nombre").value;
+    let precio = document.getElementById("precio").value;
+    precio=parseInt(precio);
+    let cantidad = document.getElementById("cantidad").value;
+    cantidad=parseInt(cantidad);
+    let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+    
+
+    if(nombre =="" || precio =="" || cantidad =="" ){
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacios',
+            text: 'Por favor ingresar datos!',
+            
+          })
+    }else if((!Caracteres.test(nombre))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no valido en el campo (Nombre)',
+            text: 'Por favor ingresar solo letras!',
+            
+          })
+    }else if((!Number.isInteger(cantidad))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no validos en el campo (Cantidad)',
+            text: 'Por favor ingresar solo numeros',
+            
+          })
+    }else if((!Number.isInteger(precio))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Caracteres no validos en el campo (Precio)',
+            text: 'Por favor ingresar solo numeros',
+            
+          })
+    }else{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Confirmar el envio del formulario?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar!',
+            cancelButtonText: 'Cancelar!',
+            Buttons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Insumo Actualizado!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Se cancelo el envio para la actualizacion',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+        }
     }
-}
-}
+     
+  
+
+
+
+// validacion de productos camilo
+validarProducto =() =>{
+     
+    let producto= document.getElementById("producto").value;
+    let precio = document.getElementById("precio").value;
+    precio=parseInt(precio);
+    let cantidad = document.getElementById("cantidad").value;
+    cantidad=parseInt(cantidad);
+    let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+    
+    
+    if(producto =="" || precio =="" || cantidad =="" ){
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacios',
+            text: 'Por favor ingresar datos!',
+            
+          })
+    }else if((!Caracteres.test(producto))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos inavalidos en producto',
+            text: 'Por favor ingresar solo letras!',
+            
+          })
+    }else if((!Number.isInteger(cantidad))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos inavalidos en cantidad',
+            text: 'Por favor ingresar solo numeros!',
+            
+          })
+    }else if((!Number.isInteger(precio))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos inavalidos en precio',
+            text: 'Por favor ingresar solo numeros!',
+            
+          })
+    }else{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Confirmar en envio del formulario?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar!',
+            cancelButtonText: 'Cancelar!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Registro Enviado!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Se cancelo el envio',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+    }
+    }
+    
+// validacion de ficha tecnica camilo 
+validarFicha =() =>{
+     
+    let producto= document.getElementById("producto").value;
+    let detalle= document.getElementById("detalle").value;
+    let cantidad1 = document.getElementById("cantidad1").value;
+    cantidad1=parseInt(cantidad1);
+    let cantidad = document.getElementById("cantidad").value;
+    cantidad=parseInt(cantidad);
+    let Caracteres = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+    
+    
+    if(producto =="" || cantidad1 =="" || cantidad =="" || detalle =="" ){
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacios',
+            text: 'Por favor ingresar datos!',
+            
+          })
+    }else if((!Caracteres.test(producto))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos invalidos en producto',
+            text: 'Por favor ingresar solo letras!',
+            
+          })
+    }else if((!Number.isInteger(cantidad))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos invalidos en cantidad',
+            text: 'Por favor ingresar solo numeros!',
+            
+          })
+    }else if((!Number.isInteger(cantidad1))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos invalidos en cantidad',
+            text: 'Por favor ingresar solo numeros!',
+            
+          })
+    }
+    else if((!Caracteres.test(detalle))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Campos Vacio',
+            text: 'Por favor ingresar datos!',
+            
+          })
+    }else{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Confirmar el envio del formulario?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar!',
+            cancelButtonText: 'Cancelar!',
+            Buttons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Registro Enviado!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Se cancelo el envio',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+    }
+    }
     
